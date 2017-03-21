@@ -1,0 +1,28 @@
+<>:
+BoxLayout:
+    orientation: 'vertical'
+    size_hint: 1,0.9
+    GridLayout:
+        size_hint: 1, 0.9
+        rows: 2
+        cols: 2
+        Label:
+            text:'User Name'
+            font_size:30
+        TextInput:
+            id: 'usn'
+            multiline: False
+            font_size:30
+        Label:
+            text:'Password'
+            font_size:30
+        TextInput:
+            id: 'psw'
+            password: True
+            multiline: False
+            font_size: 30
+    Button:
+        Label:
+            text: 'Login'
+            font_size: 30
+            on_press: root.login(usn.text,psw.text)
